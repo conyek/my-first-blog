@@ -1,26 +1,50 @@
 {% load static %}
 <html>
-    <head>
-        <title>Django Girls blog</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    </head>
-    <body>
-        <div class="page-header">
-          {% if user.is_authenticated %}
-              <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-          {% endif %}
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                    {% block content %}
-                    {% endblock %}
+
+<head>
+    <title>EK's playground</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-wrap">
+            <ul class="nav-left">
+                <div class="logo">
+                    <a href="">logo</a>
                 </div>
-            </div>
+                <li class="top-menu"><a href="">What I do</a></li>
+                <li class="top-menu"><a href="">Work</a></li>
+                <li class="top-menu"><a href="">Contact</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li class="top-menu"><a href="">Curious who I am?</a></li>
+                {% if user.is_authenticated %}
+                <li class="top-menu"><a href="{% url 'post_new' %}"><span class="glyphicon glyphicon-plus"></span></a></li>
+                {% endif %}
+            </ul>
         </div>
-    </body>
+
+    </nav>
+
+    <div class="main">
+        {% block content %} {% endblock %}
+    </div>
+
+
+    <footer class="footer">
+        <p>© 2018 EK EunKyung Kim. All rights reserved. Love.</p>
+        <div class="social">
+            <li>linkedin</li>
+            <li>instagram</li>
+        </div>
+    </footer>
+
+</body>
+
 </html>

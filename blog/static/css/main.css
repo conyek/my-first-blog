@@ -1,0 +1,22 @@
+.main-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.main-header-left {
+  background-color: #fccf45;
+  width: 50%;
+  height: 350px;
+}
+
+.main-header-right {
+  background-color: #1c1d2b;
+  width: 50%;
+  height: 350px;
+}
+
+.contact {
+  background-color: #1c1d2b;
+  width: 100%;
+  height: 350px;
+}
