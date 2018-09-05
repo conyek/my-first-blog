@@ -1,13 +1,17 @@
-{% extends 'blog/base.html' %} {% block content %}
-<div class="main-header">
-    <div class="main-header-left">
+ {% extends 'blog/base.html' %} {% block content %} {% load static %}
+<div class="main-banner">
+    <div class="main-banner-left">
+        <img class="main-img" src="{% static 'blog/main.svg' %}" alt="main-image">
     </div>
-    <div class="main-header-right">
-        <h1>EK [eeekei]</h1>
-        <p class="p-main-header">South Korean designer living in Singapore traveling in Bali. Shapes the experience of product
-            and services, digitally, and phisically.
+    <div class="main-banner-right">
+        <p class="main-banner-text">Meet EK.</p>
+        <p> EK [EEE KEI], she’s a designer who loves to fix the mess.
         </p>
     </div>
+</div>
+
+<div class="service">
+    bla bla bla
 </div>
 
 <div class="content container">

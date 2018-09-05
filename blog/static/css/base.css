@@ -1,8 +1,16 @@
 h1,
 h2,
 h3,
-h4 {
-  font-family: "Lobster", cursive;
+h4,
+a,
+a:visited {
+  font-family: "Open Sans", sans-serif;
+  color: #1c1d2b;
+}
+
+a:hover {
+  color: #fccf45;
+  text-decoration: underline;
 }
 
 .date {
@@ -18,23 +26,13 @@ h4 {
   width: 100%;
 }
 
-.top-menu,
-.top-menu:hover,
-.top-menu:visited {
-  color: #333333;
-  float: right;
-  font-size: 14px;
-}
+/* check this one! */
 
 .post {
   margin-bottom: 70px;
 }
 
-.post h1 a,
-.post h1 a:visited {
-  color: #000000;
-}
-
+/* nav style */
 .nav {
   width: 100%;
   color: #070928;
@@ -53,7 +51,10 @@ h4 {
   justify-content: space-between;
 }
 
-.logo {
+.nav-logo {
+  width: 50px;
+  height: 50px;
+  display: flex;
 }
 
 .nav-right {
@@ -62,6 +63,8 @@ h4 {
   justify-content: flex-end;
   text-align: right;
 }
+
+/* footer style */
 
 .footer {
   background-color: #070928;

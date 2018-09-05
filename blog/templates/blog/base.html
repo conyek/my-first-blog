@@ -5,7 +5,7 @@
     <title>EK's playground</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 
@@ -15,12 +15,10 @@
     <nav class="nav">
         <div class="nav-wrap">
             <ul class="nav-left">
-                <div class="logo">
-                    <a href="">logo</a>
-                </div>
-                <li class="top-menu"><a href="">What I do</a></li>
-                <li class="top-menu"><a href="">Work</a></li>
-                <li class="top-menu"><a href="">Contact</a></li>
+                <img class="nav-logo" src="{% static 'blog/logo.svg' %}" alt="logo">
+                <a href="">What I do</a></li>
+                <a href="">Work</a></li>
+                <a href="">Contact</a></li>
             </ul>
             <ul class="nav-right">
                 <li class="top-menu"><a href="">Curious who I am?</a></li>
