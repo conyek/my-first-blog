@@ -41,3 +41,10 @@
   width: 100%;
   height: 350px;
 }
+
+/*smooth scrolling*/
+
+scroll-container {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}

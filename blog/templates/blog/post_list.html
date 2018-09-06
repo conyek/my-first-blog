@@ -10,23 +10,25 @@
     </div>
 </div>
 
-<div class="service">
+<div id="whatIdo">
     bla bla bla
 </div>
 
 <div class="content container">
-    {% for post in posts %}
-    <div class="post">
-        <div class="date">
-            {{ post.published_date }}
+    <div id="work">
+        {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
-        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 
-<div class="contact">
+<div class="contact" id="contact">
     <h2>Contact me</h2>
     <p>eunkyung.ek.kim@gmail.com</p>
     <button>shoot me an email!</button>
