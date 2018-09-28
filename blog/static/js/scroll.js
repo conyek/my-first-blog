@@ -12,3 +12,6 @@ $(document).ready(function() {
     $("body").animate({ scrollTop: $path }, 1000);
   });
 });
+$(function() {
+  $('[data-toggle="tooltip"]').tooltip();
+});

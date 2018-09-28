@@ -1,4 +1,4 @@
- {% extends 'blog/base.html' %} {% block content %} {% load static %}
+{% extends 'blog/base.html' %} {% block content %} {% load static %}
 <div class="main-banner">
     <div class="main-banner-left">
         <img class="main-img" src="{% static 'media/main.svg' %}" alt="main-image">
@@ -16,6 +16,7 @@
 
 <div class="content container">
     <div id="work">
+        <h5 class="yello">Work</h5>
         {% for post in posts %}
         <div class="post">
             <div class="date">
@@ -23,15 +24,37 @@
             </div>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <p>{{ post.text|linebreaksbr }}</p>
+            <div> {{post.thumbnail|linebreaksbr }}</div>
         </div>
         {% endfor %}
     </div>
 </div>
 
 <div class="contact" id="contact">
-    <h2>Contact me</h2>
-    <p>eunkyung.ek.kim@gmail.com</p>
-    <button>shoot me an email!</button>
+    <div class="container">
+        <div class="row justify-content-center contact-icon-div">
+            <img class="contact-icon" src="{% static 'media/contact.svg' %}" alt="Contact">
+            <h5 class="yellow center">Contact</h5>
+        </div>
+        <p class="row white justify-content-center">eunkyung.ek.kim@gmail.com</p>
+        <a href="mailto:eunkyung.ek.kim@gmail.com" data-toggle="tooltip" title="" data-original-title="Best way to contact me">
+            <button class="btn btn-outline-warning one-item-center button-ek">Shoot me an email!
+            </button>
+        </a>
+        <p class="grey center">or</p>
+        <div class="container">
+            <div class="row justify-content-center">
+                <a href="https://www.linkedin.com/in/ekeunkyung/" target="blank">
+                    <img class="social-icon" src="{% static 'media/linkedin.svg' %}" alt="Linkedin">
+                </a>
+                <a href="https://www.instagram.com/ekim32/" target="blank">
+                    <img class="social-icon" src="{% static 'media/insta.svg' %}" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
 </div>
 
 {% endblock %}
