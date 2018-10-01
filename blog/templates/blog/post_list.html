@@ -1,19 +1,38 @@
 {% extends 'blog/base.html' %} {% block content %} {% load static %}
+<!-- main banner here-->
 <div class="main-banner">
-    <div class="main-banner-left">
-        <img class="main-img" src="{% static 'media/main.svg' %}" alt="main-image">
-    </div>
-    <div class="main-banner-right">
-        <p class="main-banner-text">Meet EK.</p>
-        <p> EK [EEE KEI], she’s a designer who loves to fix the mess.
-        </p>
+    <div class="container row">
+        <div class="col-lg-6 col-sm-12">
+            <img class="main-img col-12" src="{% static 'media/main.svg' %}" alt="main-image">
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <div class="main-banner-right">
+                <div class="row">
+                    <p class="main-banner-text">Meet&nbsp;</p>
+                    <p class="main-banner-text white">EK.</p>
+                </div>
+                <div class="row">
+                    <h3>EK [EEE KEI], she’s a designer who can help you</br> study your users and playing creative
+                        magic.
+                    </h3>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<div id="whatIdo">
-    bla bla bla
+<!-- service here -->
+<div class="whatIdo container">
+    <h4>What I do:</h4>
+    <div class="row">
+        <div class="col-lg-4 col-sm-12">
+            <img class="" src="{% static 'media/service-1.svg' %}" alt="process optimization">
+            <p>Process optimization</p>
+        </div>
+    </div>
 </div>
 
+<!-- worklist here -->
 <div class="content container">
     <div id="work">
         <h5 class="yello">Work</h5>
@@ -30,11 +49,12 @@
     </div>
 </div>
 
+<!-- contact here -->
 <div class="contact" id="contact">
     <div class="container">
         <div class="row justify-content-center contact-icon-div">
             <img class="contact-icon" src="{% static 'media/contact.svg' %}" alt="Contact">
-            <h5 class="yellow center">Contact</h5>
+            <h4 class="yellow center">Contact</h4>
         </div>
         <p class="row white justify-content-center">eunkyung.ek.kim@gmail.com</p>
         <a href="mailto:eunkyung.ek.kim@gmail.com" data-toggle="tooltip" title="" data-original-title="Best way to contact me">
