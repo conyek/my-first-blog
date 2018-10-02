@@ -13,7 +13,7 @@ class Post(models.Model):
     published_date = models.DateTimeField(
         auto_now_add=True, blank=True, null=True)
     slug = models.SlugField(default='', blank=True)
-    thumbnail = models.ImageField(blank=True)
+    thumbnail = models.ImageField(upload_to='blog/thumbnail')
 
     def publish(self):
         self.published_date = timezone.now()

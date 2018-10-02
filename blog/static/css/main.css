@@ -26,12 +26,21 @@
   padding-top: 15px;
 }
 
+/* worklist style */
+.hr-ek {
+  border: 1px solid #1c1d2b;
+}
+.post-title {
+  font-size: 20px;
+}
+
 /* contact style */
 
 .contact {
   background-color: #1c1d2b;
   width: 100%;
-  padding: 40 20 40 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .contact-icon {

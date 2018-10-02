@@ -34,22 +34,23 @@
 
 <!-- worklist here -->
 <div class="content container">
-    <div id="work">
-        <h5 class="yello">Work</h5>
-        {% for post in posts %}
-        <div class="post">
-            <div class="date">
-                {{ post.published_date }}
-            </div>
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
-            <div> {{post.thumbnail|linebreaksbr }}</div>
-        </div>
-        {% endfor %}
+    <hr>
+    <div class="row justify-content-center contact-icon-div">
+        <img class="contact-icon" src="{% static 'media/contact.svg' %}" alt="Contact">
+        <h4 class="yellow center">Work</h4>
     </div>
+    {% for post in posts %}
+    <div class="post">
+        <a class="post-title" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+        <img src="{{ post.thumbnail.url }}" alt="{{post.title}}">
+    </div>
+    {% endfor %}
+</div>
 </div>
 
 <!-- contact here -->
+<!-- need review -->
+
 <div class="contact" id="contact">
     <div class="container">
         <div class="row justify-content-center contact-icon-div">
@@ -74,7 +75,4 @@
         </div>
     </div>
 </div>
-
-</div>
-
 {% endblock %}
