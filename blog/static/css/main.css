@@ -28,10 +28,34 @@
 
 /* worklist style */
 .hr-ek {
-  border: 1px solid #1c1d2b;
+  width: 50%;
 }
-.post-title {
+
+.listall {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-ek {
+  margin: 30px;
+  border-radius: 0px;
+}
+
+.postlist-title {
   font-size: 20px;
+  font-weight: 600;
+}
+
+.postlist-subtitle {
+  font-size: 14px;
+  color: #666666;
+}
+.postlist-img {
+  height: 200px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
 }
 
 /* contact style */

@@ -34,18 +34,21 @@
 
 <!-- worklist here -->
 <div class="content container">
-    <hr>
+    <hr class="hr-ek">
     <div class="row justify-content-center contact-icon-div">
         <img class="contact-icon" src="{% static 'media/contact.svg' %}" alt="Contact">
         <h4 class="yellow center">Work</h4>
     </div>
-    {% for post in posts %}
-    <div class="post">
-        <a class="post-title" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
-        <img src="{{ post.thumbnail.url }}" alt="{{post.title}}">
+    <div class="listall">
+        {% for post in posts %}
+        <div class="card card-ek">
+            <img class="card-img-top postlist-img" src="{{ post.thumbnail.url }}" alt="{{post.title}}">
+            <h3 class="postlist-title">{{ post.title }}</h3>
+            <p class="postlist-subtitle">{{ post.subtitle }}</p>
+            <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-outline-warning button-ek yellow">Check it out</a>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
 </div>
 
 <!-- contact here -->

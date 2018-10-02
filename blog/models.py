@@ -7,7 +7,8 @@ from django.utils.text import slugify
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, default="title here")
+    subtitle = models.CharField(max_length=400, default="subtitle here")
     content = RichTextUploadingField(blank=True, null=True)
     created_date = models.DateTimeField(auto_now_add=True)
     published_date = models.DateTimeField(
