@@ -10,7 +10,6 @@
 .main-banner-text {
   font-size: 80px;
   font-weight: bold;
-  padding-top: 40px;
 }
 
 .main-img {
@@ -21,9 +20,26 @@
 /* service style */
 .whatIdo {
   width: 100%;
-  height: 300px;
   background-color: #ffffff;
-  padding-top: 15px;
+  padding: 30px;
+  text-align: center;
+}
+.service-card {
+  text-align: center;
+}
+
+.service-card:hover {
+  background-color: #eeeeee;
+}
+
+.service-img {
+  width: 60px;
+  text-align: center;
+}
+
+.service-text {
+  padding-top: 10px;
+  font-weight: 500;
 }
 
 /* worklist style */
@@ -39,7 +55,6 @@
 }
 
 .card-ek {
-  margin: 30px;
   border-radius: 0px;
 }
 
@@ -70,8 +85,6 @@
 .contact-icon {
   width: 20px;
   height: 23.5px;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
 .contact-icon-div {

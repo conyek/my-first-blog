@@ -72,6 +72,11 @@ a:hover {
   color: #ffffff;
 }
 
+/* section */
+.section-icon {
+  width: 25px;
+  height: 25px;
+}
 /* button */
 .button-ek {
   border: 2px solid #fccf45 !important;

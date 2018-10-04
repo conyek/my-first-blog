@@ -21,31 +21,62 @@
     </div>
 </div>
 
-<!-- service here -->
+<!-- service -->
 <div class="whatIdo container">
-    <h4>What I do:</h4>
-    <div class="row">
-        <div class="col-lg-4 col-sm-12">
-            <img class="" src="{% static 'media/service-1.svg' %}" alt="process optimization">
-            <p>Process optimization</p>
+    <div class="row contact-icon-div justify-content-center">
+        <img class="section-icon" src="{% static 'media/work.svg' %}" alt="Section">
+        <h4 class="yellow pl-2">Services I provide</h4>
+    </div>
+
+    <div class="row mx-3 justify-content-center">
+        <div class="service-card col-md-2 col-sm-12 pt-3 pb-1 px-3" data-toggle="tooltip" data-placement="bottom" title="Not sure why on your questions? I can help to find out what're the underlying problems that your service has, or what
+        people want in the field of your business">
+            <img class="service-img" src="{% static 'media/research.png' %}" alt="User research">
+            <p class="service-text">User research</h3>
         </div>
+
+        <div class="service-card col-md-2 col-sm-12 pt-3 pb-1 px-3" data-toggle="tooltip" data-placement="bottom" title="Your site, your application. I can help you to organize the structure and provide a flow that are already proven
+                usable, brilliant">
+            <img class="service-img" src="{% static 'media/flow.png' %}" alt="UX structure and flow">
+            <p class="service-text">UX structure and flow</p>
+        </div>
+
+        <div class="service-card col-md-2 col-sm-12 pt-3 pb-1 px-3" data-toggle="tooltip" data-placement="bottom" title="Feels like everyone is not aligned? stuck on something? I can provide a fresh pair of eyes and conduct workshops (using
+        lots of post-its)">
+            <img class="service-img" src="{% static 'media/workshop.png' %}" alt="Workshop">
+            <p class="service-text">Workshops</p>
+        </div>
+
+        <div class="service-card col-md-2 col-sm-12 pt-3 pb-1 px-3" data-toggle="tooltip" data-placement="bottom" title="I can help you to create a visual styling and design assets that are matching with your brand. If you don't have a
+        brand, don't worry, I can help you with that.">
+            <img class="service-img" src="{% static 'media/visd.png' %}" alt="Visual Design">
+            <p class="service-text">Visual design</p>
+        </div>
+
+        <div class="service-card col-md-2 col-sm-12 pt-3 pb-1 px-3" data-toggle="tooltip" data-placement="bottom" title=": Honestly I am not that super, but I can try.">
+            <img class="service-img" src="{% static 'media/video.png' %}" alt="Video and photograph">
+            <p class="service-text">Video and photograph</p>
+        </div>
+
     </div>
 </div>
 
 <!-- worklist here -->
 <div class="content container">
     <hr class="hr-ek">
-    <div class="row justify-content-center contact-icon-div">
-        <img class="contact-icon" src="{% static 'media/contact.svg' %}" alt="Contact">
-        <h4 class="yellow center">Work</h4>
+    <div class="row justify-content-center contact-icon-div pt-3">
+        <img class="section-icon" src="{% static 'media/project.svg' %}" alt="Section">
+        <h4 class="yellow pl-2">Projects</h4>
     </div>
     <div class="listall">
         {% for post in posts %}
-        <div class="card card-ek">
+        <div class="card card-ek mx-3 mb-5">
             <img class="card-img-top postlist-img" src="{{ post.thumbnail.url }}" alt="{{post.title}}">
-            <h3 class="postlist-title">{{ post.title }}</h3>
-            <p class="postlist-subtitle">{{ post.subtitle }}</p>
-            <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-outline-warning button-ek yellow">Check it out</a>
+            <h3 class="postlist-title px-3 pt-3">{{ post.title }}</h3>
+            <p class="postlist-subtitle px-3 pb-1">{{ post.subtitle }}</p>
+            <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-outline-warning button-ek w-50 ml-3">Check
+                it
+                out</a>
         </div>
         {% endfor %}
     </div>
@@ -58,7 +89,7 @@
     <div class="container">
         <div class="row justify-content-center contact-icon-div">
             <img class="contact-icon" src="{% static 'media/contact.svg' %}" alt="Contact">
-            <h4 class="yellow center">Contact</h4>
+            <h4 class="yellow pl-2">Contact</h4>
         </div>
         <p class="row white justify-content-center">eunkyung.ek.kim@gmail.com</p>
         <a href="mailto:eunkyung.ek.kim@gmail.com" data-toggle="tooltip" title="" data-original-title="Best way to contact me">
