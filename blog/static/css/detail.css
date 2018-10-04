@@ -1,0 +1,13 @@
+.post-banner {
+  width: 100%;
+}
+
+.post-cover {
+  height: 200px;
+}
+
+@media (max-width: 768px) {
+  .post-cover {
+    max-height: 100px;
+  }
+}

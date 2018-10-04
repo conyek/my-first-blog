@@ -9,6 +9,10 @@ class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=200, default='title here')
     subtitle = models.CharField(max_length=400, default='subtitle here')
+    cover_img = models.ImageField(
+        upload_to='blog/cover', blank='true', default='null')
+    background = models.TextField(default='background')
+    role = models.TextField(default='role', blank='true')
     content = RichTextUploadingField(blank=True, null=True)
     created_date = models.DateTimeField(auto_now_add=True)
     published_date = models.DateTimeField(
