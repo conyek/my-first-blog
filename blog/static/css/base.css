@@ -2,11 +2,9 @@
 h1,
 h2,
 h3,
-h4,
-a,
-a:visited {
+h4 {
   font-family: "Open Sans", sans-serif;
-  color: #1c1d2b;
+  color: #000000;
 }
 
 h1 {
@@ -33,6 +31,11 @@ p,
 a {
   font-size: 14px;
   font-weight: 400;
+}
+
+a,
+a:visited {
+  color: #fccf45;
 }
 
 a:hover {
@@ -77,12 +80,18 @@ a:hover {
   width: 25px;
   height: 25px;
 }
+
+.section-title {
+  font-weight: 600;
+}
+
 /* button */
 .button-ek {
   border: 2px solid #fccf45 !important;
   border-radius: 0 !important;
   font-size: 14px;
   margin-bottom: 10px;
+  color: #fccf45;
 }
 
 /*layout style*/
@@ -103,7 +112,6 @@ a:hover {
 /* nav style */
 .nav-ek {
   height: 60px;
-  color: #070928;
   background-color: white;
 }
 
@@ -111,12 +119,19 @@ a:hover {
   margin-right: 0px;
 }
 
-/*.nav-wrap {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
+.nav-text {
+  color: #070928 !important;
 }
-*/
+
+.nav-text:hover {
+  color: #fccf45 !important;
+  text-decoration: underline;
+}
+
+.nav-text:active {
+  text-decoration: underline;
+}
+
 .nav-left {
   width: 20%;
   display: flex;
