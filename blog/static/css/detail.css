@@ -4,15 +4,17 @@
   width: 100%;
   z-index: 0;
   text-align: center;
+  background: black;
 }
 
 .post-cover {
   width: 100%;
   max-height: 350px;
   background-size: cover;
+  opacity: 0.6;
 }
 
-.post-text {
+.post-cover-text {
   width: 100%;
   position: absolute;
   z-index: 10;
@@ -20,11 +22,21 @@
   color: white;
 }
 
+.post-title {
+  padding: 10 0 10 0px;
+  text-align: center;
+}
+
+.post-text {
+  padding: 10 0 10 0px;
+  font-size: 16px;
+}
+
 @media (max-width: 768px) {
   .post-cover {
     max-height: 100px;
   }
-  .post-text {
+  .post-cover-text {
     padding-top: 20px;
   }
   .post-text-title {
@@ -32,6 +44,10 @@
     font-weight: 600;
   }
   .post-text-subtitle {
+    font-size: 14px;
+  }
+
+  .post-text {
     font-size: 14px;
   }
 }

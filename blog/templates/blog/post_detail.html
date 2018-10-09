@@ -2,35 +2,50 @@
 <!--banner-->
 <div class="post-banner">
     <img class="post-cover" src="{{ post.cover_img.url }}" alt="{{post.title}}">
-    <div class="post-text">
+    <div class="post-cover-text">
         <h1 class="post-text-title white">{{post.title}}</h1>
-        <h4 class="post-text-subtitle white"> {{post.subtitle}}</h4>
+        <h4 class="post-text-subtitle white pt-3"> {{post.subtitle}}</h4>
         {% if user.is_authenticated %}
         <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         {% endif %}
     </div>
 </div>
 
-<div class="container">
+
+<div class="container col-8 justify-content-center pt-5">
 
     <!--background & role-->
-
     <div class="post-background">
-        <p>background</p>
-        <p> {{ post.background }}</p>
+        <h3 class="section-title post-title">Background</h3>
+        <p class="post-text"> {{ post.background }}</P>
     </div>
     <div class="post-role">
-        <p>my role</p>
-        <p> {{ post.role }}</p>
+        <h3 class="section-title post-title">My role</h3>
+        <p class="post-text"> {{ post.role }}</p>
     </div>
 
     <!--content detail-->
 
     <div class="post-content">
-        <div>
+        <div class="post-text">
             {{ post.content | safe}}
         </div>
     </div>
-
 </div>
+
+<!--pagination
+
+<ul class="pager">
+    {% if posts.has_previous %}
+    <li class="previous">
+        <a href="?page={{ posts.previous_page_number }}"> Previous Post</a>
+    </li>
+    {% endif %}
+    {% if posts.has_next %}
+    <li class="next">
+        <a href="?page={{ posts.next_page_number }}">Next Post</a>
+    </li>
+    {% endif %}
+</ul>
+-->
 {% endblock %}
