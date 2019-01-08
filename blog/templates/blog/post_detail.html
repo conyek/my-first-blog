@@ -2,7 +2,7 @@
 <!--banner-->
 <div class="post-banner">
     <img class="post-cover" src="{{ post.cover_img.url }}" alt="{{post.title}}">
-    <div class="post-cover-text">
+    <div class="post-cover-text align-item-center">
         <h1 class="post-text-title white">{{post.title}}</h1>
         <h4 class="post-text-subtitle white pt-3"> {{post.subtitle}}</h4>
         {% if user.is_authenticated %}
@@ -16,11 +16,9 @@
 
     <!--background & role-->
     <div class="post-background">
-        <h3 class="section-title post-title">Background</h3>
         <p class="post-text"> {{ post.background }}</P>
     </div>
     <div class="post-role">
-        <h3 class="section-title post-title">My role</h3>
         <p class="post-text"> {{ post.role }}</p>
     </div>
 
@@ -33,14 +31,21 @@
     </div>
 </div>
 
-<!--pagination
+<!--back to list -->
+<div class="container col-8 pt-2 justify-content-left">
+    <img class="section-icon" src="{ % static 'media/back.png' % }" alt="back">
+    <a class="back-to-list" href="{% url 'index' %}#work">Back to list</a>
+</div>
+{% endblock %}
 
+<!-- pagination
 <ul class="pager">
     {% if posts.has_previous %}
     <li class="previous">
         <a href="?page={{ posts.previous_page_number }}"> Previous Post</a>
     </li>
     {% endif %}
+
     {% if posts.has_next %}
     <li class="next">
         <a href="?page={{ posts.next_page_number }}">Next Post</a>
@@ -48,4 +53,3 @@
     {% endif %}
 </ul>
 -->
-{% endblock %}

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/detail.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- 
     <link rel="script" href="{% static 'js/scroll.js' %}">
@@ -44,7 +45,7 @@
             </ul>
             <ul class="nav-right">
                 <li class="nav-item nav-right-text">
-                    <a class="nav-text" href="#">A bit more about me</a>
+                    <a class="nav-text" href="{% url 'me' %}">A bit more about me</a>
                 </li>
             </ul>
         </div>
@@ -58,7 +59,9 @@
     <!-- footer here  -->
     <footer class="footer footer-ek pt-4">
         <div class="container">
-            <h5>© 2018 EK EunKyung Kim. All rights reserved. Love.</h5>
+            <h5>© 2018 EK EunKyung Kim. Proudly built this site from scratch though I am a total beginner, using
+                django(python a bit), html, css, javascript.</h5>
+            <h5>Thanks a lot for the kind people online who wrote great tutorials, examples, etc. Love.
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
