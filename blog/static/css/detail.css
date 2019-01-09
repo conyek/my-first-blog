@@ -1,8 +1,10 @@
 .post-banner {
   display: flex;
   position: relative;
-  height: 350px;
-  width: 100%;
+  height: auto;
+  width: auto;
+  max-width: 1080px;
+  max-height: 350px;
   z-index: 0;
   text-align: center;
   background: black;
