@@ -1,0 +1,2 @@
+web: gunicorn djangogirls.wsgi
+worker: py bbot.py
