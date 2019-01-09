@@ -32,9 +32,8 @@
 </div>
 
 <!--back to list -->
-<div class="container col-8 pt-2 justify-content-left">
-    <img class="section-icon" src="{ % static 'media/back.png' % }" alt="back">
-    <a class="back-to-list" href="{% url 'index' %}#work">Back to list</a>
+<div class="container back col-8 pt-2 justify-content-left">
+    <a href="{% url 'index' %}#work"> << Back to list</a>
 </div>
 {% endblock %}
 
